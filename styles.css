@@ -393,6 +393,7 @@ ul {
 .promo-image {
   border-radius: var(--radius);
   overflow: hidden;
+  object-fit: cover;
 }
 
 .promo-image img {
@@ -493,6 +494,9 @@ ul {
 
 .app-button-small {
   font-size: 0.625rem;
+}
+.app-button img{
+  height: 50px;
 }
 
 .app-button-large {
