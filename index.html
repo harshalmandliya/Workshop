@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ruma - Modern Furniture & Home Decor</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -13,23 +13,28 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header-content">
           <div class="header-left">
             <a href="/" class="logo">
-              <img src="" alt="logo" width="100" height="40" />
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="ruma"
+                width="100"
+                height="40"
+                class="logo-img"
+              />
             </a>
             <nav class="main-nav">
               <ul>
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="/">Shop</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -41,13 +46,13 @@
               </button>
             </div>
             <div class="header-actions">
-              <a href="/" class="icon-btn">
+              <a href="/account" class="icon-btn">
                 <i class="fas fa-user"></i>
               </a>
-              <a href="/" class="icon-btn">
+              <a href="/cart" class="icon-btn">
                 <i class="fas fa-shopping-cart"></i>
               </a>
-              <a href="/" class="btn btn-primary">Get Started</a>
+              <a href="/get-started" class="btn btn-primary">Get Started</a>
               <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
               </button>
@@ -56,5 +61,397 @@
         </div>
       </div>
     </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>
+                Up to <span class="highlight">50% off</span> on<br />Latest
+                Arrivals
+              </h1>
+              <a href="/" class="btn btn-primary">Shop</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Collection -->
+      <section class="collection">
+        <div class="container">
+          <h2 class="section-title">Our Collection</h2>
+          <div class="collection-grid">
+            <div class="collection-item">
+              <div class="badge">New In</div>
+              <img
+                src="https://placehold.co/400x300"
+                alt="Living Room Collection"
+              />
+            </div>
+            <div class="collection-item">
+              <img
+                src="https://placehold.co/400x300"
+                alt="Bedroom Collection"
+              />
+            </div>
+            <div class="collection-item">
+              <img src="https://placehold.co/400x300" alt="Office Collection" />
+            </div>
+            <div class="collection-item">
+              <img
+                src="https://placehold.co/400x300"
+                alt="Bathroom Collection"
+              />
+            </div>
+            <div class="collection-item">
+              <img
+                src="https://placehold.co/400x300"
+                alt="Kitchen Collection"
+              />
+            </div>
+            <div class="collection-item">
+              <img src="https://placehold.co/400x300" alt="Dining Collection" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title">Categories</h2>
+          <div class="categories-grid">
+            <a href="/" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-couch"></i>
+              </div>
+              <span>Living Room</span>
+            </a>
+            <a href="/" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-bed"></i>
+              </div>
+              <span>Bedroom</span>
+            </a>
+            <a href="/" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <span>Lighting</span>
+            </a>
+            <a href="/category/dining" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <span>Dining</span>
+            </a>
+            <a href="/category/office" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <span>Office</span>
+            </a>
+            <a href="/category/bathroom" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-bath"></i>
+              </div>
+              <span>Bathroom</span>
+            </a>
+            <a href="/category/kitchen" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-blender"></i>
+              </div>
+              <span>Kitchen</span>
+            </a>
+            <a href="/category/entertainment" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-tv"></i>
+              </div>
+              <span>Entertainment</span>
+            </a>
+            <a href="/category/books" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <span>Books</span>
+            </a>
+            <a href="/category/textiles" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <span>Textiles</span>
+            </a>
+            <a href="/category/decor" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <span>Decor</span>
+            </a>
+            <a href="/category/gifts" class="category-item">
+              <div class="category-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <span>Gifts</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Favourite Brands -->
+      <section class="brands">
+        <div class="container">
+          <h2 class="section-title">Favourite Brands</h2>
+          <div class="brands-slider">
+            <a href="/brand/1" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 1" />
+            </a>
+            <a href="/brand/2" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 2" />
+            </a>
+            <a href="/brand/3" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 3" />
+            </a>
+            <a href="/brand/4" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 4" />
+            </a>
+            <a href="/brand/5" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 5" />
+            </a>
+            <a href="/brand/6" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 6" />
+            </a>
+            <a href="/brand/7" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 7" />
+            </a>
+            <a href="/brand/8" class="brand-item">
+              <img src="https://placehold.co/100x60" alt="Brand 8" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Offers -->
+      <section class="special-offers">
+        <div class="container">
+          <h2 class="section-title">Special Offers</h2>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x300" alt="Product 1" />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Modern Furniture</span>
+                <h3 class="product-title">Minimalist Chair</h3>
+                <div class="product-price">
+                  <span class="price-current">₹799.00</span>
+                  <span class="price-old">₹999.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x300" alt="Product 2" />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Bedroom</span>
+                <h3 class="product-title">Wooden Bed Frame</h3>
+                <div class="product-price">
+                  <span class="price-current">₹12,999.00</span>
+                  <span class="price-old">₹15,999.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x300" alt="Product 3" />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Lighting</span>
+                <h3 class="product-title">Pendant Light</h3>
+                <div class="product-price">
+                  <span class="price-current">₹2,499.00</span>
+                  <span class="price-old">₹3,499.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x300" alt="Product 4" />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Decor</span>
+                <h3 class="product-title">Wall Art Set</h3>
+                <div class="product-price">
+                  <span class="price-current">₹1,899.00</span>
+                  <span class="price-old">₹2,499.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x300" alt="Product 5" />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Bathroom</span>
+                <h3 class="product-title">Modern Vanity</h3>
+                <div class="product-price">
+                  <span class="price-current">₹8,999.00</span>
+                  <span class="price-old">₹11,999.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotional Section -->
+      <section class="promo">
+        <div class="container">
+          <div class="promo-content">
+            <h2 class="promo-title">Ditch the old, embrace the bold!</h2>
+            <p class="promo-text">
+              Be it for your workspace, your living room, or your bedroom, we've
+              got something to make your interior shine.
+            </p>
+          </div>
+          <div class="promo-image">
+            <img src="https://placehold.co/1200x400" alt="Modern workspace" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services">
+        <div class="container">
+          <h2 class="section-title text-center">
+            Services for your convenience
+          </h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h3 class="service-title">Free Shipping</h3>
+              <p class="service-text">On orders above ₹1000</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="service-title">24/7 Support</h3>
+              <p class="service-text">Customer service available all day</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="service-title">Secure Payments</h3>
+              <p class="service-text">100% secure payment methods</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-undo"></i>
+              </div>
+              <h3 class="service-title">Easy Returns</h3>
+              <p class="service-text">30-day return policy</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <h3 class="service-title">Gift Cards</h3>
+              <p class="service-text">Perfect gift for your loved ones</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3 class="service-title">Call Center</h3>
+              <p class="service-text">Dedicated support team</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-app">
+            <h3 class="footer-title">Download ruma app</h3>
+            <p class="footer-text">
+              Get exclusive offers, personalized recommendations, and easy
+              access to our products on the go.
+            </p>
+            <div class="app-buttons">
+              <a href="#" class="app-button">
+                <img src="https://placehold.co/24x24" alt="Google Play" />
+                <div class="app-button-text">
+                  <span class="app-button-small">Get it on</span>
+                  <span class="app-button-large">Google Play</span>
+                </div>
+              </a>
+              <a href="#" class="app-button">
+                <img src="https://placehold.co/24x24" alt="App Store" />
+                <div class="app-button-text">
+                  <span class="app-button-small">Download on the</span>
+                  <span class="app-button-large">App Store</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="footer-app-image">
+            <img src="https://placehold.co/200x300" alt="Mobile app" />
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-heading">About Us</h4>
+            <ul class="footer-menu">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Customer Support</h4>
+            <ul class="footer-menu">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Policies</h4>
+            <ul class="footer-menu">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Connect With Us</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 ruma. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
